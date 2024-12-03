@@ -1,0 +1,192 @@
+/* ------------------------------
+   Paleta de Cores
+   ------------------------------ */
+   :root {
+    --primary-color: #3f51b5; /* Azul Material Design */
+    --primary-color-light: #c5cae9; /* Azul Claro */
+    --primary-color-dark: #303f9f; /* Azul Escuro */
+    --accent-color: #ff4081; /* Rosa Material Design */
+    --text-color: #212121; /* Cor padrão de texto */
+    --background-color: #f5f5f5; /* Fundo padrão */
+  }
+  
+  /* ------------------------------
+     Reset e Tipografia
+     ------------------------------ */
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Fonte padrão */
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  /* Cabeçalhos */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    color: var(--primary-color-dark);
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  /* Links */
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--primary-color-dark);
+  }
+  
+  /* ------------------------------
+     Layout Base
+     ------------------------------ */
+  /* Container Centralizado */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* Grid Responsivo */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem;
+  }
+  
+  .col {
+    flex: 1;
+    padding: 0.5rem;
+  }
+  
+  .col-4 {
+    flex: 0 0 33.333%;
+  }
+  
+  .col-6 {
+    flex: 0 0 50%;
+  }
+  
+  .col-12 {
+    flex: 0 0 100%;
+  }
+  
+  /* ------------------------------
+     Botões
+     ------------------------------ */
+  button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--primary-color-dark);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:disabled {
+    background-color: var(--primary-color-light);
+    cursor: not-allowed;
+  }
+  
+  /* ------------------------------
+     Cartões (Compatível com mat-card)
+     ------------------------------ */
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  
+  .card-header {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  .card-content {
+    padding: 1rem;
+    color: var(--text-color);
+  }
+  
+  /* ------------------------------
+     Rodapé
+     ------------------------------ */
+  footer {
+    background-color: var(--primary-color-dark);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  footer a {
+    color: var(--accent-color);
+  }
+  
+  footer a:hover {
+    color: var(--primary-color-light);
+  }
+  
+  /* ------------------------------
+     Responsividade
+     ------------------------------ */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .col-4,
+    .col-6 {
+      flex: 0 0 100%;
+    }
+  }
+  
+  .example-container {
+    height: 100vh; /* Preenche a altura total da janela */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  mat-sidenav {
+    width: 250px;
+  }
+  
+  mat-sidenav-content {
+    padding: 16px;
+  }
+  
+  

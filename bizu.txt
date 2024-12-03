@@ -1,0 +1,9 @@
+## limpar o cache
+
+ng cache clean
+
+ng build
+
+ng build --configuration production
+
+ng serve

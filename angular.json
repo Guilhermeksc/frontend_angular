@@ -24,26 +24,23 @@
               "src/favicon.ico",
               "src/assets"
             ],
-          "styles": [
-            "node_modules/bootstrap/dist/css/bootstrap.min.css",
-            "src/styles.css"
-          ],
-          "scripts": [
-            "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-          ]
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1mb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4kb",
+                  "maximumError": "500kb"
                 }
               ],
               "outputHashing": "all"
@@ -69,12 +66,33 @@
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n"
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "frontend:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "3681cbac-c0a7-48a4-98e2-e03c25201499"
   }
 }

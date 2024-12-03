@@ -14,18 +14,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-        <li class="nav-item"><a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/atas" routerLinkActive="active">Atas</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/licitacao" routerLinkActive="active">Licitação</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/contratos" routerLinkActive="active">Contratos</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/dispensa-eletronica" routerLinkActive="active">Dispensa Eletrônica</a></li>
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#atas">Atas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#licitacao">Licitação</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contratos">Contratos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#dispensa-eletronica">Dispensa Eletrônica</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- Mostrar o header apenas se showHeader for true -->
-<header class="masthead" *ngIf="showHeader">
+<header class="masthead">
   <video autoplay muted loop playsinline id="masthead-video" src="assets/video/header-video.mp4"></video>
   <div class="overlay"></div>
   <div class="container">
@@ -34,7 +34,106 @@
     <a class="btn btn-primary btn-xl text-uppercase" routerLink="/services">Saiba mais</a>
   </div>
 </header>
+<section class="features">
+  <div class="section-line"></div>
+  <h2 class="features-heading">O que você pode fazer?</h2>
+  <div class="feature-grid">
+    <div class="feature-item">
+      <img src="assets/icons/automation.svg" alt="Automação">
+      <h3>Automação de Processos</h3>
+      <p>Reduza o trabalho manual com automações personalizadas para licitações.</p>
+    </div>
+    <div class="feature-item">
+      <img src="assets/icons/report.svg" alt="Relatórios">
+      <h3>Relatórios Inteligentes</h3>
+      <p>Gere relatórios claros e detalhados em segundos.</p>
+    </div>
+    <div class="feature-item">
+      <img src="assets/icons/documents.svg" alt="Documentos">
+      <h3>Gestão de Documentos</h3>
+      <p>Organize e manipule documentos com eficiência.</p>
+    </div>
+  </div>
+</section>
+
 
 <main>
   <router-outlet></router-outlet>
+
+<!-- Seção Atas -->
+<section class="page-section" id="atas">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Atas</h2>
+      <p class="text-muted">Gerencie e acompanhe suas atas de forma prática.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Seção Licitação -->
+<section class="page-section" id="licitacao">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Licitação</h2>
+      <p class="text-muted">Automatize e acompanhe o processo licitatório.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Seção Contratos -->
+<section class="page-section" id="contratos">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Contratos</h2>
+      <p class="text-muted">Gestão eficiente de contratos administrativos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Seção Dispensa Eletrônica -->
+<section class="page-section" id="dispensa-eletronica">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Dispensa Eletrônica</h2>
+      <p class="text-muted">Simplifique a gestão de dispensas eletrônicas.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Seção Contato -->
+  <section class="page-section" id="contact">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">Contato</h2>
+        <h3 class="section-subheading text-muted">Entre em contato conosco!</h3>
+      </div>
+      <form id="contactForm">
+        <div class="row align-items-stretch mb-5">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input class="form-control" id="name" type="text" placeholder="Seu Nome *" required />
+            </div>
+            <div class="form-group">
+              <input class="form-control" id="email" type="email" placeholder="Seu Email *" required />
+            </div>
+            <div class="form-group">
+              <input class="form-control" id="phone" type="tel" placeholder="Seu Telefone *" required />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group form-group-textarea">
+              <textarea class="form-control" id="message" placeholder="Sua Mensagem *" required></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar Mensagem</button>
+        </div>
+      </form>
+    </div>
+  </section>
 </main>
+
+<footer class="footer">
+  <p>© 2024 Licitação 360. Todos os direitos reservados.</p>
+</footer>

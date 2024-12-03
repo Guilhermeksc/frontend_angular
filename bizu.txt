@@ -7,3 +7,7 @@ ng build
 ng build --configuration production
 
 ng serve
+
+testar servidor
+
+lite-server --baseDir="dist/frontend"

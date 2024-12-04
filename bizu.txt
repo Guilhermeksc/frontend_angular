@@ -4,10 +4,13 @@ ng cache clean
 
 ng build
 
-ng build --configuration production
+ng build --configuration production --base-href /static/ --deploy-url /static/
+
 
 ng serve
 
 testar servidor
 
 lite-server --baseDir="dist/frontend"
+
+cp -r ../../frontend/dist/frontend/browser/* ./static

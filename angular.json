@@ -13,9 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/frontend/browser",
-            "baseHref": "/static/",
-            "deployUrl": "/static/",
+            "outputPath": "dist/frontend",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -29,7 +27,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "/"
           },
           "configurations": {
             "production": {
@@ -41,7 +40,7 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kb",
+                  "maximumWarning": "300kb",
                   "maximumError": "500kb"
                 }
               ],
